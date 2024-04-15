@@ -1,9 +1,14 @@
-name: Test
+name: Tests
 on:
-  push:
   pull_request:
 
 jobs:
   line-coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - run: exit 0
+
+  not-required:
+    runs-on: ubuntu-latest
     steps:
       - run: echo "success"

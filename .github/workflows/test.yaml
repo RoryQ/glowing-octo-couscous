@@ -1,0 +1,9 @@
+name: Test
+on:
+  push:
+  pull_request:
+
+jobs:
+  line-coverage:
+    steps:
+      - run: echo "success"

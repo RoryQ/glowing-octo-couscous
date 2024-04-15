@@ -1,4 +1,4 @@
-name: required
+name: Tests
 on:
   pull_request:
 
@@ -8,7 +8,14 @@ jobs:
     steps:
       - run: echo "success"
         
-  required-job:
+  required:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        image:
+          - one
+          - two
+          - three
+          - four
     steps:
-      - run: echo "success"
+      - run: echo ${{ matrix.image }}

@@ -6,16 +6,9 @@ jobs:
   line-coverage:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "success"
-        
-  required:
+      - run: exit 1
+
+  not-required:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        image:
-          - one
-          - two
-          - three
-          - four
     steps:
-      - run: echo ${{ matrix.image }}
+      - run: echo "success"
